@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --aws-dark: #232f3e;
+  --aws-darker: #1a242f;
+  --aws-orange: #ff9900;
+  --aws-orange-hover: #ec7211;
+  --aws-blue: #0073bb;
+  --aws-blue-hover: #005276;
+  --aws-border: #d5dbdb;
+  --aws-bg: #fafafa;
+  --aws-card: #ffffff;
+  --aws-text: #16191f;
+  --aws-text-secondary: #545b64;
+  --aws-sidebar-width: 240px;
+  --aws-table-header: #fafafa;
+  --aws-table-hover: #f2f3f3;
+  --aws-badge-bg: #eef1f3;
+}
+
+[data-theme="dark"] {
+  --aws-dark: #16191f;
+  --aws-darker: #0f1419;
+  --aws-border: #3d454d;
+  --aws-bg: #0f1419;
+  --aws-card: #1b2531;
+  --aws-text: #eaecee;
+  --aws-text-secondary: #aab7b8;
+  --aws-table-header: #232f3e;
+  --aws-table-hover: #283545;
+  --aws-badge-bg: #283545;
+}
+
+body {
+  background: var(--aws-bg);
+  color: var(--aws-text);
+  font-family: "Amazon Ember", "Helvetica Neue", Roboto, Arial, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 0.8s linear infinite;
+}
+
+.surface {
+  background: var(--aws-card);
+  border-color: var(--aws-border);
+}
+
+.table-header {
+  background: var(--aws-table-header);
+}
+
+.table-row-hover:hover {
+  background: var(--aws-table-hover);
+}
+
+.badge-type {
+  background: var(--aws-badge-bg);
+}
