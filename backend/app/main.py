@@ -31,8 +31,8 @@ app.add_middleware(
     secret_key=settings.secret_key,
     session_cookie=settings.session_cookie_name,
     max_age=settings.session_max_age,
-    same_site="lax",
-    https_only=False,
+    same_site="none",
+    https_only=True,
 )
 
 app.include_router(auth.router)
