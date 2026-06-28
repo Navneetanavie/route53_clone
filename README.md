@@ -167,6 +167,8 @@ All endpoints except `/login` and `/health` require an authenticated session coo
 | POST   | `/hosted-zones`       | Create (201)                   |
 | PUT    | `/hosted-zones/{id}`  | Update                         |
 | DELETE | `/hosted-zones/{id}`  | Delete + cascade records (204) |
+| GET    | `/hosted-zones/{id}/export` | Export zone (format=json or format=bind) |
+| POST   | `/hosted-zones/{id}/import/bind` | Import BIND zone file |
 
 **Query params:** `page`, `page_size`, `search`, `sort_by`, `sort_order`
 
@@ -178,6 +180,7 @@ All endpoints except `/login` and `/health` require an authenticated session coo
 | POST   | `/hosted-zones/{id}/records`        | Create record (201)      |
 | PUT    | `/records/{id}`                     | Update record            |
 | DELETE | `/records/{id}`                     | Delete record (204)      |
+| POST   | `/hosted-zones/{id}/records/bulk-delete` | Bulk delete records (204) |
 
 **Query params:** `page`, `page_size`, `search`, `type` (filter), `sort_by`, `sort_order`
 
@@ -306,3 +309,23 @@ DATABASE_URL=sqlite:///./route53.db
 SECRET_KEY=your-secret-key
 CORS_ORIGINS=["http://localhost:3000"]
 ```
+
+---
+
+## User Interface & Additional Features
+
+### Dark Mode
+- **Persistence**: Theme preference (Light or Dark mode) is saved in the browser's `localStorage` and restored automatically on page load.
+- **Aesthetics**: Dark mode changes styling dynamically via CSS variables affecting borders, tables, cards, text, and form inputs for a cohesive, low-light AWS console look.
+
+### Keyboard Shortcuts
+Quickly navigate the application using keyboard controls:
+- Press `/` to automatically focus the search bar.
+- Press `?` to open the Keyboard Shortcuts help dialog.
+- Press `Esc` to close any open dialogs or modals.
+
+### BIND / JSON Import & Export
+On any Hosted Zone detail page:
+- **Import BIND**: Upload a BIND `.zone` file or paste BIND records directly into the text editor. The backend parses the inputs and imports the new records.
+- **Export JSON**: Download a JSON backup containing the hosted zone details and all associated records.
+- **Export BIND**: Generate and download a standard RFC-compliant BIND zone file for easy migration.
