@@ -13,7 +13,7 @@ const variants: Record<Variant, string> = {
   primary:
     "bg-[var(--aws-orange)] hover:bg-[var(--aws-orange-hover)] text-black border border-[#c45500]",
   secondary:
-    "bg-white hover:bg-gray-50 text-[var(--aws-text)] border border-[var(--aws-border)]",
+    "bg-[var(--aws-btn-sec-bg)] hover:bg-[var(--aws-btn-sec-hover)] text-[var(--aws-btn-sec-text)] border border-[var(--aws-btn-sec-border)]",
   danger:
     "bg-[#d13212] hover:bg-[#ba2e0f] text-white border border-[#ba2e0f]",
   link: "bg-transparent text-[var(--aws-blue)] hover:text-[var(--aws-blue-hover)] border-none underline-offset-2 hover:underline p-0",

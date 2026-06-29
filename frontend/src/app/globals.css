@@ -16,6 +16,10 @@
   --aws-table-header: #fafafa;
   --aws-table-hover: #f2f3f3;
   --aws-badge-bg: #eef1f3;
+  --aws-btn-sec-bg: #ffffff;
+  --aws-btn-sec-hover: #f9fafb;
+  --aws-btn-sec-text: var(--aws-text);
+  --aws-btn-sec-border: var(--aws-border);
 }
 
 [data-theme="dark"] {
@@ -29,6 +33,10 @@
   --aws-table-header: #232f3e;
   --aws-table-hover: #283545;
   --aws-badge-bg: #283545;
+  --aws-btn-sec-bg: #3d454d;
+  --aws-btn-sec-hover: #4e5761;
+  --aws-btn-sec-text: #ffffff;
+  --aws-btn-sec-border: #545b64;
 }
 
 body {
