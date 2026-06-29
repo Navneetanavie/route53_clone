@@ -76,3 +76,21 @@ body {
 .badge-type {
   background: var(--aws-badge-bg);
 }
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+select,
+textarea {
+  background-color: var(--aws-card);
+  color: var(--aws-text);
+}
+
+input[readonly] {
+  background-color: var(--aws-badge-bg) !important;
+  color: var(--aws-text-secondary) !important;
+}
+
+option {
+  background-color: var(--aws-card);
+  color: var(--aws-text);
+}
+

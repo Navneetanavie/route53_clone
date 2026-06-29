@@ -133,7 +133,7 @@ export function RecordFormModal({
               type="text"
               value={form.routing_policy}
               readOnly
-              className="w-full px-3 py-2 text-sm border border-[var(--aws-border)] rounded bg-gray-50 text-[var(--aws-text-secondary)]"
+              className="w-full px-3 py-2 text-sm border border-[var(--aws-border)] rounded bg-[var(--aws-badge-bg)] text-[var(--aws-text-secondary)]"
             />
           </div>
         </div>
